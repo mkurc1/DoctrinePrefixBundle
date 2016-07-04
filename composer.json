@@ -1,0 +1,28 @@
+{
+    "name": "mkurc1/doctrine-prefix-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Symfony DoctrinePrefixBundle",
+    "homepage": "http://bitapp.pl",
+    "keywords": [
+        "symfony",
+        "doctrine",
+        "database",
+        "prefix"
+    ],
+    "authors": [
+        {
+            "name": "Michał Kurcewicz",
+            "email": "mkurc1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DoctrinePrefixBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.3.9",
+        "doctrine/orm": "^2.4.8"
+    }
+}

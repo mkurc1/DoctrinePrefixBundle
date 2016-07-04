@@ -1,0 +1,9 @@
+parameters:
+    doctrine_prefix.subscriber.class: 'DoctrinePrefixBundle\Subscriber\TablePrefixSubscriber'
+
+services:
+    mybundle.tblprefix_subscriber:
+        class: '%doctrine_prefix.subscriber.class%'
+        arguments: ['%doctrine_prefix.table_prefix%']
+        tags:
+            - { name: doctrine.event_subscriber }
