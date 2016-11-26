@@ -57,7 +57,7 @@ class TablePrefixSubscriber implements EventSubscriber
         }
 
         foreach ($classMetadata->getAssociationMappings() as $fieldName => $mapping) {
-            if ($mapping['type'] == ClassMetadataInfo::MANY_TO_MANY && $mapping['isOwningSide'] == true) {
+            if ($mapping['type'] == ClassMetadataInfo::MANY_TO_MANY && $mapping['isOwningSide'] === true) {
                 $mappedTableName = $classMetadata->associationMappings[$fieldName]['joinTable']['name'];
 
                 if (false !== strpos($mappedTableName, $this->prefix)) {
